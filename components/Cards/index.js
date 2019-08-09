@@ -53,7 +53,7 @@ function createArticle(articleData) {
 
   headline.textContent = articleData.headline;
   img.src = articleData.authorPhoto;
-  span.textContent = `By ${articleData.authorName}`;
+  span.textContent = "By " + articleData.authorName;
 
   card.appendChild(headline);
   card.appendChild(author);
