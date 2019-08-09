@@ -26,7 +26,7 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
         const artList = Object.values(response.data.articles);
         artList.forEach(topic => {
             topic.forEach(article => {
-                const cards = createCard(article);
+                const cards = createArticle(article);
                 cardsContainer.appendChild(cards);
             })
         })
@@ -53,7 +53,7 @@ function createArticle(articleData) {
 
   headline.textContent = articleData.headline;
   img.src = articleData.authorPhoto;
-  span.textContent = `By ${articleObj.authorName}`;
+  span.textContent = `By ${articleData.authorName}`;
 
   card.appendChild(headline);
   card.appendChild(author);
